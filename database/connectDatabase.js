@@ -2,11 +2,11 @@ import mysql from 'mysql2/promise.js';
 
 async function createPool() {
   const db = await mysql.createPool({
-    host: 'localhost',
+    host: '34.155.222.250',
     user: 'root',
-    password: 'abcdef',
+    password: 'hcY(osHzuh)khdSn',
     database: 'library',
-    connectionLimit: 10,
+    connectionLimit: 100,
   });
   return db;
 }

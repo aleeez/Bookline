@@ -30,19 +30,24 @@ const createUsers = `CREATE TABLE IF NOT EXISTS users (
   role VARCHAR(50) DEFAULT "user"
 );`;
 
-function createTable(myquery) {
-  return db
-    .getConnection()
-    .then((connection) =>
-      connection.query(myquery).finally(() => {
-        connection.release();
-      }),
-    )
-    .catch((err) => {
-      console.log(err);
-    });
+async function createTable(myquery) {
+  let connection;
+  try {
+    connection = await db.getConnection();
+    await connection.query(myquery);
+  } catch (err) {
+    console.error('Error creating table:', err);
+  } finally {
+    if (connection) {
+      connection.release();
+    }
+  }
 }
 
 export async function createAllTables() {
-  await Promise.all([createTable(createBooks), createTable(createUsers), createTable(createBorrow)]);
+  try {
+    await Promise.all([createTable(createBooks), createTable(createUsers), createTable(createBorrow)]);
+  } catch (err) {
+    console.error('Error creating all tables:', err);
+  }
 }
