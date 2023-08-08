@@ -1,0 +1,46 @@
+/* --------------- */
+/* itt jartam */
+/* levi */
+h1 {
+    color: rgb(1, 192, 128);
+    font-style: italic;
+    margin-left: 250px
+}
+
+aside {
+    border: solid;
+    border-width: 5px;
+    border-color: rgb(1, 192, 128);
+    border-radius: 10px  ;
+    display: block;
+}
+
+p {
+    color: rgb(1, 192, 128);
+    font-style: italic;
+    font-weight: bold;
+    margin-left: 35%;
+}
+
+button {
+    display: block;
+    margin: 25px;
+    margin-left: 40%;
+    border-radius: 10px;
+}
+
+
+.row{
+    
+    display: flex;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.larger-column {
+    flex: 3;
+  }
+  
+  .smaller-column {
+    flex: 1;
+  }
