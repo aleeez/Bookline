@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Homepage</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/public/forms.css'>   
+    <script src="/public/frontend.js"></script>
+</head>
+
+<body>
+    <h1>Homepage</h1>
+    <div class="container">
+        
+        <div class="column-2">
+            <h2>All books:</h2>
+            <div id="scrollable-wrapper">
+                <% Object.values(books).forEach((book)=> { %>
+                    <ul class="vau" id="<%= book.isbn %>">
+                        <li class="label">ISBN:
+                            <div class="value">
+                                <%= book.isbn %>
+                            </div>
+                        </li>
+                        <li class="label">Title:
+                            <div class="value">
+                                <%= book.title %>
+                            </div>
+                        </li>
+                        <li class="label">Author:
+                            <div class="value">
+                                <%= book.author %>
+                            </div>
+                        </li>
+                        <li class="label">Year:
+                            <div class="value">
+                                <%= book.year %>
+                            </div>
+                        </li>
+                        <li class="label">Description:
+                            <div class="value-description">
+                                <!--
+                        <%= book.description %>
+                        -->
+                            </div>
+                        </li>
+                        <li class="label">Instances:
+                            <div class="value">
+                                <%= book.instance %>
+                            </div>
+                        </li>
+                    </ul>
+                    <% }); %>
+            </div>
+        </div>
+        <form action="/user/filterrr" method="POST" class="column-1">
+            <h2>Make your own filter!</h2>
+            <div class="fieldpack">
+                <label for="title">By title:</label><br>
+                <input type="text" id="title" name="title"><br>
+            </div>
+            <div class="fieldpack">
+                <label for="author">By author:</label><br>
+                <input type="text" id="author" name="author"><br>
+            </div>
+            <div class="fieldpack">
+                <input type="radio" id="contactChoice1" name="minyear" value="true">
+                <label for="contactChoice1">Minimum publication year</label>
+            </div>
+            <div class="fieldpack">
+                <input type="radio" id="contactChoice1" name="maxyear" value="true">
+                <label for="contactChoice1">Maximum publication year:</label>
+            </div>
+            <div class="fieldpack">
+                <input type="radio" id="contactChoice3" name="rarity" value="true">
+                <label for="contactChoice2">Rare</label>
+            </div>
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+        <nav class="column-3" id="homenav">
+            <div class="mynav">
+                <a href="/login/dashboard/dashboard-display">Get started!</a>
+            </div>
+        </nav>
+    </div>
+
+
+
+
+</body>
+
+</html>

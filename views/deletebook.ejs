@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Delete book</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='/public/forms.css'>
+  <script src='main.js'></script>
+</head>
+
+<body>
+  <h1 id="maintitle">Delete a book!</h1>
+  <nav>
+    <a href="/">> Home page</a>
+    <a href="/login/dashboard/dashboard-display">> Dashboard</a>
+    <a href="/login/dashboard/bookshelf/personal">> My bookshelf</a>
+    <a href="/login/dashboard/adminrights/insertbook/insertbook-display">> Insert a book</a>
+    <a href="/login/dashboard/adminrights/manageusers/manageusers-display">> Manage users</a>
+  </nav>
+  <form method="POST" action="/login/dashboard/adminrights/deletebook/deletebook-form">
+    <h2>Give the ISBN of the desired book:</h2>
+    <div class="fieldpack">
+      <label for="title">ISBN:</label><br>
+      <input type="text" id="isbn" name="isbn" required><br>
+    </div>
+    <div>
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</body>
+
+</html>

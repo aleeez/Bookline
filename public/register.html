@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Register</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='forms.css'>
+  <script src='/backend.js'></script>
+</head>
+
+<body>
+  <h1 id="maintitle">Register to be a member of the library!</h1>
+  <nav>
+    <a href="/">> Home page</a>
+  </nav>
+  <form action="/register/createHash" method="POST">
+    <div class="fieldpack">
+      <label for="fname">First Name:</label><br>
+      <input type="text" id="fname" name="fname" required><br>
+    </div>
+    <div class="fieldpack">
+      <label for="lname">Last name:</label><br>
+      <input type="text" id="lname" name="lname" required><br>
+    </div>
+    <div class="fieldpack">
+      <label for="username">Username:</label><br>
+      <input type="text" id="username" name="username" required><br>
+    </div>
+    <div class="fieldpack">
+      <label for="password">Password:</label><br>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <div class="fieldpack">
+      <label for="password2">Password again:</label><br>
+      <input type="password" id="password2" name="password2" required>
+    </div>
+    <div>
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+
+</body>
+
+</html>

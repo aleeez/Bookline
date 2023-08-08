@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>LogIn</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='/public/forms.css'>
+  <script src='/backend.js'></script>
+</head>
+
+<body>
+  <h1 id="maintitle">Log In!</h1>
+  <nav>
+    <a href="/">> Home page</a>
+  </nav>
+  <form action="/login" method="POST">
+    <div class="fieldpack">
+      <label for="username">Username:</label><br>
+      <input type="text" id="username" name="username" required><br>
+    </div>
+    <div class="fieldpack">
+      <label for="password">Password:</label><br>
+      <input type="password" id="password" name="password" required>
+    </div>
+
+    <div>
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+  <br>
+  <h2>Don't have an account? <a href="/public/register.html" id="register">Register here!</a></h2>
+  
+
+</body>
+
+</html>

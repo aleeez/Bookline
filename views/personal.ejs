@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Personal profile</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='/public/forms.css'>
+  <script src='/public/frontend.js'></script>
+</head>
+
+<body>
+  <h1 id="maintitle">Welcome, <%= username %>
+  </h1>
+  <nav>
+    <a href="/">> Homepage</a>
+    <a href="/login/dashboard/dashboard-display">> Dashboard</a>
+    <a href="/login/dashboard/myaccount/myaccount-display">> My account</a>
+  </nav>
+  
+  <form method="POST" action="/login/dashboard/bookshelf/bookhandling/borrowreturn">
+    <h2>Give the Title of the desired book:</h2>
+    <div class="fieldpack">
+      <label for="title">Title of the book:</label><br>
+      <input type="text" id="title" name="title" required><br>
+    </div>
+    <h2>What do you want to do?</h2>
+    <div class="fieldpack">
+      <input type="radio" id="contactChoice1" name="intention" value="borrow" checked>
+      <label for="contactChoice1">Borrow</label><br>
+      <input type="radio" id="contactChoice2" name="intention" value="return">
+      <label for="contactChoice2">Return</label>
+    </div>
+    <div>
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+  <button class="history-button" id="<%=username%>">History</button>
+  <table id="historytable"></table>
+</body>
+
+</html>

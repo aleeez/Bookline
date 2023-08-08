@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>My account</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='/public/forms.css'>
+  <script src='main.js'></script>
+</head>
+
+<body>
+  <h1 id="maintitle">My account</h1>
+  <nav>
+    <a href="/">> Home page</a>
+    <a href="/login/dashboard/dashboard-display">> Dashboard</a>
+    <a href="/login/dashboard/bookshelf/personal">> My bookshelf</a>
+  </nav>
+  <h2>~ My name: <em>
+      <%= user.firstName %>
+    </em> <em>
+      <%= user.lastName %>
+    </em></h2>
+  <h2>~ My username: <em>
+      <%= user.username %>
+    </em></h2>
+  <h2>~ My role: <em>
+      <%= user.role %>
+    </em></h2>
+  <div class="container">
+    <div class="column-2">
+      <form method="POST" action="/login/dashboard/myaccount/changeusername">
+        <h2>Change username:</h2>
+        <div class="fieldpack">
+          <label for="newusername">Enter new username:</label><br>
+          <input type="text" id="newusername" name="newusername" required><br>
+        </div>
+        <div class="fieldpack">
+          <label for="password">Confirm with password:</label><br>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+    <div class="column-1">
+      <form method="POST" action="/login/dashboard/myaccount/changepassword">
+        <h2>Change password:</h2>
+        <div class="fieldpack">
+          <label for="password2">New password:</label><br>
+          <input type="password" id="password2" name="password2" required>
+        </div>
+        <div class="fieldpack">
+          <label for="password">Confirm with old password:</label><br>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

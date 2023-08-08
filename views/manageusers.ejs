@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Manage users</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='/public/forms.css'>
+  <script src='/public/frontend.js'></script>
+</head>
+
+<body>
+  <h1 id="maintitle">Manage users</h1>
+  <nav>
+    <a href="/">> Home page</a>
+    <a href="/login/dashboard/dashboard-display">> Dashboard</a>
+    <a href="/login/dashboard/bookshelf/personal">> My bookshelf</a>
+    <a href="/login/dashboard/adminrights/insertbook/insertbook-display">> Insert a book</a>
+    <a href="/login/dashboard/adminrights/deletebook/deletebook-display">> Delete a book</a>
+  </nav>
+  <h2>Users and their roles:</h2>
+  <table id="user-list">
+    <tbody>
+      <% users.forEach((user)=> { %>
+        <tr>
+          <td>
+            <% if (user.role === 'admin') { %>
+              <button id="<%= user.username %>" class="admin-button">Admin -</button>
+            <% } else { %>
+              <button id="<%= user.username %>" class="admin-button">Admin +</button>
+            <% } %>
+          </td>
+          <td>
+            <%= user.username %>
+          </td>
+        </tr>
+        <% }); %>
+    </tbody>
+
+  </table>
+</body>
+
+</html>

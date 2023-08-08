@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Welcome to the library!</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='forms.css'>
+    <script src='../backend.js'></script>
+</head>
+
+<body>
+    <h1>Welcome to the library!</h1>
+    <form action="/response/user" method="POST">
+        <h2>Choose user:</h2>
+        <div class="fieldpack">
+            <label for="user">User:</label><br>
+            <select id="user" name="user" required>
+                <option value="" disabled selected>Select user</option>
+                <% users.forEach(function(user) { %>
+                    <option value="<%= user.id %>">
+                        <%= user.username %>
+                    </option>
+                    <% }); %>
+            </select><br>
+        </div>
+        <h2>Give the Title of the desired book:</h2>
+        <div class="fieldpack">
+            <label for="title">Title of the book:</label><br>
+            <input type="text" id="title" name="title" required><br>
+        </div>
+        <h2>What do you want to do?</h2>
+        <div class="fieldpack">
+            <input type="radio" id="contactChoice1" name="intention" value="borrow" checked>
+            <label for="contactChoice1">Borrow</label><br>
+            <input type="radio" id="contactChoice2" name="intention" value="return">
+            <label for="contactChoice2">Return</label>
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+</body>
+
+</html>

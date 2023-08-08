@@ -1,0 +1,242 @@
+h1 {
+  color: rgb(255, 255, 255);
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+nav {
+   padding: 10px; 
+  border: solid;
+  border-color: white;
+  border-radius: 10px;
+  width: 40%;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+nav > a{
+  margin-right: 50px;
+}
+
+#homenav {
+  border: none;
+}
+
+#maintitle {
+  align-self: center;
+  align-items: center;
+  font-size: 50px;
+}
+
+h2 {
+  color: rgb(255, 255, 255);
+  font-style: italic;
+  margin-left: 10%;
+  margin-bottom: 20px;
+}
+
+#register-text {
+  color:rgb(0, 88, 59);
+  margin-left: 100px;
+  font-size: large;
+  font-weight: bold;
+}
+
+div.fieldpack {
+  margin-left: 10%;
+  margin-bottom: 10px;
+  padding: 20px;
+}
+
+div.fieldpack > label {
+  color: rgb(0, 88, 59);
+  font-weight: bold;
+  font-family: 'Brush Script';
+  font-size: 20px;
+}
+
+div.fieldpack > input {
+  border: solid;
+  border-radius: 5px;
+  border-color: rgb(0, 130, 87);
+}
+
+button {
+  background-color: rgb(0, 88, 59);
+  color: white;
+  border: 2px solid;
+  border-radius: 5px;
+  margin-left: 12%;
+  margin-top: 20px;
+  width: 100px;
+  height: 30px;
+  font-size: 15px;
+}
+
+button:hover {
+  width: 120px;
+  height: 35px;
+  margin-left: 11.5%;
+  margin-top: 18px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.mynav {
+  display: inline-block;
+  border: solid;
+  margin-right: 20px; 
+  padding: 10px;
+  width: 200px;
+  height: 50px;
+  border-color: rgb(0, 88, 59);
+  background-color: rgb(12, 184, 127, 0.5);
+  border-radius: 10px;
+  border-width: 5px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 30px;
+  font-style: italic;
+}
+
+.mynav:hover {
+  background-color: rgb(9, 128, 88);
+  font-size: 30px;
+  font-style: normal;
+  font-weight: bold;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+body {
+  background-attachment: fixed;
+  background: url('./images/bookbackground.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+li.label {
+  font-weight: bold;
+  color: rgb(0, 88, 59);
+  margin-left: 8%;
+}
+
+div.value {
+  color: aliceblue;
+}
+
+.value-description {
+  color: white;
+}
+
+ #historytable {
+  margin-left: 150px;
+  margin-top: 50px;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s, transform 0.5s;
+  border: solid;
+  border-radius: 10px;
+  border-color: rgb(0, 88, 59);
+  padding: 10px;
+}
+
+#historytable.show {
+  opacity: 1;
+  transform: translateY(0);
+} 
+
+#historytable.hide {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.historyclass {
+  color: white;
+  padding-left: 50px;
+  font-size: 20px;
+  color: rgb(0, 88, 59);
+}
+
+table {
+  margin-top: 50px;
+  margin-left: 150px;
+}
+
+td {
+  color: white;
+  padding-left: 50px;
+  font-size: 36px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.column-1 {
+  flex-basis: 30%;
+  padding: 20px;
+}
+
+.column-2 {
+  flex-basis: 15%;
+  padding: 20px;
+}
+
+.column-3 {
+  flex-basis: 40.33%;
+  padding: 20px;
+}
+
+#scrollable-wrapper {
+  scrollbar-color: rgb(0, 88, 59);
+  border: solid;
+  border-radius: 10px;
+  border-color: rgb(0, 88, 59);
+  border-width: 5px;
+  background-color: rgb(196, 170, 221, 0.5);
+  padding: 20px;
+  overflow-y: auto;
+  height: 450px;
+}
+
+.d-board {
+  
+  margin-bottom: 100px;
+}
+
+em {
+  color: rgb(0, 88, 59);
+}
+
+input {
+  height: 20px;
+}
+
+.row-sticks{
+    
+  display: flex;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.larger-column {
+  flex: 3;
+}
+
+.smaller-column {
+  flex: 1;
+}
+
+#register {
+  text-decoration: underline;
+}
+
+#register:hover {
+  color: rgb(0, 88, 59);;
+}
