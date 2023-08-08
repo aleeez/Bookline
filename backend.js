@@ -121,6 +121,6 @@ app.get('/', (request, response) => {
     });
 });
 
-app.listen(8080, () => {
+app.listen(8080, '0.0.0.0', () => {
   console.log('Server listening on http://localhost:8080/ ...');
 });

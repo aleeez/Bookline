@@ -97,6 +97,8 @@ uploadDir
 *.txt
 
 # Images
-*.jpg 
-*.jpeg 
-*.png
+cone.jpg 
+dark.jpg 
+freefall.jpg 
+kamikaze.jpg 
+
