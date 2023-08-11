@@ -2,10 +2,10 @@ import mysql from 'mysql2/promise.js';
 
 async function createPool() {
   const db = await mysql.createPool({
-    host: '10.3.96.3',
+    host: 'bookline-v2:europe-west3:bookline-v22-sql',
     port: 3306,
     user: 'root',
-    password: ':\u0026onVvH7xm(z8QEy7dEP',
+    password: 'PdhqJ1UKKajV[a$>',
     database: 'library',
     connectionLimit: 100,
     connectTimeout: 300000

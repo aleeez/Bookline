@@ -102,3 +102,6 @@ dark.jpg
 freefall.jpg 
 kamikaze.jpg 
 
+# Terraform credentials
+credentials/
+variables.tf
